@@ -1,16 +1,16 @@
 import { RouteProps } from 'react-router-dom';
 
-import { AboutPage } from '@/pages/AboutPage';
+import { OrdersPage } from '@/pages/OrdersPage';
 import { HomePage } from '@/pages/HomePage';
 
 export const enum AppRouter {
     HOME = 'home',
-    ABOUT = 'about',
+    ORDERS = 'orders',
 }
 
 export const RoutePath: Record<AppRouter, string> = {
     [AppRouter.HOME]: '/',
-    [AppRouter.ABOUT]: '/about',
+    [AppRouter.ORDERS]: '/orders',
 };
 
 export const RouteConfig: Record<AppRouter, RouteProps> = {
@@ -18,8 +18,8 @@ export const RouteConfig: Record<AppRouter, RouteProps> = {
         element: <HomePage />,
         path: RoutePath.home,
     },
-    [AppRouter.ABOUT]: {
-        element: <AboutPage />,
-        path: RoutePath.about,
+    [AppRouter.ORDERS]: {
+        element: <OrdersPage />,
+        path: RoutePath.orders,
     },
 };

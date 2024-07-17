@@ -11,7 +11,7 @@ export const App = () => {
     return (
         <div className={`app ${theme}`}>
             <Link to={RoutePath.home}>Home</Link>
-            <Link to={RoutePath.about}>About</Link>
+            <Link to={RoutePath.orders}>Orders</Link>
             <AppRouter />
             <ThemeSwitcher />
         </div>
