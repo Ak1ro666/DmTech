@@ -10,6 +10,7 @@ export const Button = (props: ButtonProps) => {
         className,
         children,
         onClick,
+        square,
         theme = ButtonTheme.PRIMARY,
         size = ButtonSize.M,
         ...otherProps
@@ -17,11 +18,13 @@ export const Button = (props: ButtonProps) => {
 
     return (
         <button
-            className={cn(styles.Button, {}, [
-                styles[theme],
-                styles[size],
-                className,
-            ])}
+            className={cn(
+                styles.Button,
+                {
+                    [styles['square']]: square,
+                },
+                [styles[theme], styles[size], className],
+            )}
             type={type}
             onClick={onClick}
             {...otherProps}

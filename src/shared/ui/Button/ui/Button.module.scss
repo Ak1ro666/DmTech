@@ -1,4 +1,14 @@
 .Button {
-    color: red;
-    background-color: yellow;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.primary {
+    color: var(--bg-color);
+    background-color: var(--secondary-color);
+}
+
+.square {
+    aspect-ratio: 1 / 1;
 }
