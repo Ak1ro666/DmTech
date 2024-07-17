@@ -1,19 +1,22 @@
-import { Link } from 'react-router-dom';
+import { Sidebar } from '@/widgets/Sidebar';
+import { Navbar } from '@/widgets/Navbar';
+
 import { useTheme } from './providers/ThemeProvider';
 
-import { RoutePath } from '@/shared/config/router/router.config';
 import { AppRouter } from './providers/AppRouter';
-import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
 
 export const App = () => {
     const { theme } = useTheme();
 
     return (
         <div className={`app ${theme}`}>
-            <Link to={RoutePath.home}>Home</Link>
-            <Link to={RoutePath.orders}>Orders</Link>
-            <AppRouter />
-            <ThemeSwitcher />
+            <Navbar />
+            <div className="content">
+                <Sidebar />
+                <div className="page">
+                    <AppRouter />
+                </div>
+            </div>
         </div>
     );
 };

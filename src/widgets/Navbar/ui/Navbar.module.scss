@@ -1,0 +1,25 @@
+.Navbar {
+    height: var(--navbar-height);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--inverted-bg-color);
+}
+
+.logo {
+    max-width: 149px;
+}
+
+.links {
+    color: var(--inverted-primary-color);
+    display: flex;
+    column-gap: 15px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}

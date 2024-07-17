@@ -1,5 +1,5 @@
 @import './reset.scss';
-@import './global/variables.scss';
+@import './variables/globals.scss';
 @import './themes/dark.scss';
 @import './themes/light.scss';
 
@@ -8,4 +8,13 @@
     font: var(--font-s);
     color: var(--primary-color);
     background-color: var(--bg-color);
+}
+
+.content {
+    display: flex;
+}
+
+.page {
+    flex: 1 1 auto;
+    padding: 20px;
 }
