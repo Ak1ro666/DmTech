@@ -11,6 +11,17 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/,
     };
 
+    const babelLoader = {
+        test: /\.m?(jsx,ts,tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env'],
+            },
+        },
+    };
+
     const fileLoader = {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
@@ -44,5 +55,5 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         use: ['@svgr/webpack'],
     };
 
-    return [fileLoader, svgLoader, typescriptLoader, cssLoader];
+    return [fileLoader, svgLoader, babelLoader, typescriptLoader, cssLoader];
 }
