@@ -13,9 +13,7 @@ export const App = () => {
             <Navbar />
             <div className="content">
                 <Sidebar />
-                <div className="page">
-                    <AppRouter />
-                </div>
+                <AppRouter />
             </div>
         </div>
     );
