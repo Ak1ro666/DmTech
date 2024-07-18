@@ -16,4 +16,22 @@
 
 .square {
     aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square.s {
+    width: 20px;
+    height: 20px;
+}
+
+.square.m {
+    width: 40px;
+    height: 40px;
+}
+
+.square.xl {
+    width: 60px;
+    height: 60px;
 }

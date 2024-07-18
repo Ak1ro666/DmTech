@@ -22,9 +22,21 @@
     bottom: 20px;
     display: flex;
     justify-content: center;
-    width: 100%;
+}
+
+.lang {
+    margin-left: 20px;
 }
 
 .Sidebar.collapsed {
     width: var(--sidebar-width-collapsed);
+}
+
+.Sidebar.collapsed > .switchers {
+    flex-direction: column-reverse;
+    row-gap: 20px;
+}
+
+.Sidebar.collapsed > .switchers > .lang {
+    margin: 0;
 }

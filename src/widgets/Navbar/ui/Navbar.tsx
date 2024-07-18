@@ -10,6 +10,7 @@ import logo from '@/shared/assets/icons/logo.png';
 
 import { useState } from 'react';
 import { Theme, useTheme } from '@/app/providers/ThemeProvider';
+import { useTranslation } from 'react-i18next';
 
 interface NavbarProps {
     className?: string;
@@ -17,6 +18,7 @@ interface NavbarProps {
 
 export const Navbar = ({ className }: NavbarProps) => {
     const [state] = useState(12);
+    const { t } = useTranslation();
     const { theme } = useTheme();
 
     return (
@@ -29,13 +31,13 @@ export const Navbar = ({ className }: NavbarProps) => {
                     theme={AppLinkTheme.INVERTED_PRIMARY}
                     to={RoutePath.home}
                 >
-                    Home
+                    {t('Главная')}
                 </AppLink>
                 <AppLink
                     theme={AppLinkTheme.INVERTED_PRIMARY}
                     to={RoutePath.orders}
                 >
-                    Orders
+                    {t('Заказы')}
                 </AppLink>
             </div>
             <AppLink
@@ -44,7 +46,9 @@ export const Navbar = ({ className }: NavbarProps) => {
                 className={styles.cart}
             >
                 {theme === Theme.DARK ? <DarkCartIcon /> : <LightCartIcon />}
-                <p>Корзина ({state})</p>
+                <p>
+                    {t('Корзина')} ({state})
+                </p>
             </AppLink>
         </div>
     );

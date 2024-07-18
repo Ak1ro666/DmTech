@@ -21,7 +21,7 @@ export const Button = (props: ButtonProps) => {
             className={cn(
                 styles.Button,
                 {
-                    [styles['square']]: square,
+                    [styles.square]: square,
                 },
                 [styles[theme], styles[size], className],
             )}
