@@ -7,6 +7,7 @@ import eslintReactRefresh from 'eslint-plugin-react-refresh';
 import prettierPlugin from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import { fixupConfigRules } from '@eslint/compat';
+import i18nPlugin from 'eslint-plugin-i18next';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
@@ -36,6 +37,7 @@ export default [
             '@typescript-eslint': tseslint.plugin,
             'react-hooks': eslintReactHooks,
             'react-refresh': eslintReactRefresh,
+            i18next: i18nPlugin,
             prettier: prettierPlugin,
         },
     },
@@ -48,6 +50,7 @@ export default [
             ...eslintConfigPrettier.rules,
             'react/react-in-jsx-scope': 'off',
             '@typescript-eslint/no-unused-vars': 'warn',
+            'i18next/no-literal-string': 2,
         },
     },
 ];
