@@ -12,12 +12,13 @@ interface SidebarProps {
 export const Sidebar = ({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState<boolean>(false);
 
-    const onToggle = () => {
+    const toggleCollapsed = () => {
         setCollapsed((prev) => !prev);
     };
 
     return (
         <div
+            data-testid="sidebar"
             className={cn(
                 styles.Sidebar,
                 {
@@ -27,10 +28,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
             )}
         >
             <Button
+                data-testid="button-toggle"
                 square
                 size={ButtonSize.M}
                 className={styles.ButtonCollapsed}
-                onClick={onToggle}
+                onClick={toggleCollapsed}
                 theme={ButtonTheme.PRIMARY}
             >
                 {collapsed ? '>' : '<'}

@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import styles from './ErrorPage.module.scss';
+import styles from './PageError.module.scss';
 import { Button } from '@/shared/ui/Button';
 
-export const ErrorPage = () => {
+export const PageError = () => {
     const { t } = useTranslation();
 
     const onReload = () => {
