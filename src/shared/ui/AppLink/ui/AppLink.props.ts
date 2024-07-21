@@ -5,6 +5,7 @@ export const enum AppLinkTheme {
     SECONDARY = 'secondary',
     INVERTED_PRIMARY = 'inverted_primary',
     INVERTED_SECONDARY = 'inverted_secondary',
+    CLEAR = 'clear',
 }
 
 export interface AppLinkProps extends LinkProps {

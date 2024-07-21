@@ -14,6 +14,13 @@
     background-color: var(--secondary-color);
 }
 
+.clear {
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--primary-color);
+}
+
 .square {
     aspect-ratio: 1 / 1;
     display: flex;

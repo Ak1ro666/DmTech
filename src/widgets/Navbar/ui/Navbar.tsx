@@ -22,7 +22,10 @@ export const Navbar = ({ className }: NavbarProps) => {
     const { theme } = useTheme();
 
     return (
-        <div className={cn(styles.Navbar, {}, [className])}>
+        <div
+            data-testid="navbar"
+            className={cn(styles.Navbar, {}, [className])}
+        >
             <AppLink to={RoutePath.home} className={styles.logo}>
                 <img src={logo} alt="logo" />
             </AppLink>

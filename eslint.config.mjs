@@ -51,6 +51,8 @@ export default [
             'react/react-in-jsx-scope': 'off',
             '@typescript-eslint/no-unused-vars': 'warn',
             'i18next/no-literal-string': 2,
+            '@typescript-eslint/ban-ts-comment': 'off',
+            'react/display-name': 'off',
         },
     },
 ];

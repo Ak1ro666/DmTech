@@ -17,6 +17,7 @@ const config: Config = {
     // cacheDirectory: "C:\\Users\\Ak1ro\\AppData\\Local\\Temp\\jest",
 
     // Automatically clear mock calls, instances, contexts and results before every test
+    preset: 'ts-jest',
     clearMocks: true,
     testEnvironment: 'jest-environment-jsdom',
     coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
@@ -33,6 +34,7 @@ const config: Config = {
     ],
     rootDir: '../../',
     roots: ['<rootDir>src'],
+    modulePaths: ['<rootDir>'],
     testMatch: [
         '**/__tests__/**/*.[jt]s?(x)',
         '**/?(*.)+(spec|test).[tj]s?(x)',
@@ -42,7 +44,10 @@ const config: Config = {
     moduleNameMapper: {
         '@/(.*)': '<rootDir>/src/$1',
         '\\.s?css$': 'identity-obj-proxy',
-        '\\svg$': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        '\\.(jpg|jpeg|png)$': 'identity-obj-proxy',
+    },
+    transform: {
+        '^.+.svg$': 'jest-transformer-svg',
     },
 
     // Indicates whether the coverage information should be collected while executing the test
