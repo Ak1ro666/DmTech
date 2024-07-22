@@ -1,14 +1,14 @@
-import { renderWithRouter } from '@/shared/lib/tests/renderWithRouter';
+import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 import { screen } from '@testing-library/dom';
 
 describe('AppLink', () => {
     test('Test render', () => {
-        renderWithRouter(<AppLink to="/">TEST</AppLink>);
+        componentRender(<AppLink to="/">TEST</AppLink>);
         expect(screen.getByText('TEST')).toBeInTheDocument();
     });
     test('Test primary theme', () => {
-        renderWithRouter(
+        componentRender(
             <AppLink theme={AppLinkTheme.PRIMARY} to="/">
                 TEST
             </AppLink>,

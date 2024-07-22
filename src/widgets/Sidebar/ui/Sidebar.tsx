@@ -30,8 +30,8 @@ export const Sidebar = ({ className }: SidebarProps) => {
             <Button
                 data-testid="button-toggle"
                 square
-                size={ButtonSize.M}
-                className={styles.ButtonCollapsed}
+                size={ButtonSize.XL}
+                className={styles.ButtonToggle}
                 onClick={toggleCollapsed}
                 theme={ButtonTheme.PRIMARY}
             >

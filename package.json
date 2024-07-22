@@ -13,8 +13,9 @@
         "test:unit": "jest --config \"./config/jest/jest.config.ts\"",
         "test:ui": "npx loki test",
         "test:ui:ok": "npx loki approve",
+        "test:ui:ci": "npx build-storybook && loki --requireReference --reactUri file:./storybook-static",
         "storybook": "storybook dev -p 6006 -c ./config/storybook",
-        "build-storybook": "storybook build -c ./config/storybook"
+        "storybook:build": "storybook build -c ./config/storybook"
     },
     "keywords": [],
     "author": "",
@@ -22,6 +23,7 @@
     "description": "",
     "devDependencies": {
         "@babel/core": "^7.24.9",
+        "@babel/plugin-transform-runtime": "^7.24.7",
         "@babel/preset-env": "^7.24.8",
         "@babel/preset-react": "^7.24.7",
         "@babel/preset-typescript": "^7.24.7",

@@ -1,4 +1,4 @@
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
 import { useTranslation } from 'react-i18next';
 
 import cn from '@/shared/lib/classNames/classNames';
@@ -19,6 +19,7 @@ export const LangSwitcher = ({ className, shortLang }: LangSwitcherProps) => {
         <Button
             className={cn('', {}, [className])}
             theme={ButtonTheme.INVERTED_PRIMARY}
+            size={ButtonSize.S}
             onClick={toggleLang}
         >
             {t(shortLang ? 'Яз' : 'Язык')}

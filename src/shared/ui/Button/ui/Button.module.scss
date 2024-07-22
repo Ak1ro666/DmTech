@@ -14,6 +14,16 @@
     background-color: var(--secondary-color);
 }
 
+.background {
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+.inverted_background {
+    color: var(--inverted-primary-color);
+    background-color: var(--inverted-bg-color);
+}
+
 .clear {
     border: none;
     background: none;
@@ -22,23 +32,37 @@
 }
 
 .square {
-    aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.square.s {
-    width: 20px;
-    height: 20px;
+.square.size_s {
+    width: var(--font-line-s);
+    height: var(--font-line-s);
+    font: var(--font-s);
 }
 
-.square.m {
-    width: 40px;
-    height: 40px;
+.square.size_m {
+    width: var(--font-line-m);
+    height: var(--font-line-m);
+    font: var(--font-m);
 }
 
-.square.xl {
-    width: 60px;
-    height: 60px;
+.square.size_xl {
+    width: var(--font-line-xl);
+    height: var(--font-line-xl);
+    font: var(--font-xl);
+}
+
+.size_s {
+    font: var(--font-s);
+}
+
+.size_m {
+    font: var(--font-m);
+}
+
+.size_xl {
+    font: var(--font-xl);
 }

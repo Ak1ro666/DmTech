@@ -40,11 +40,75 @@ export const Clear: Story = {
 
 export const Square: Story = {
     args: {
-        children: 'TEST',
+        children: '>',
+        theme: ButtonTheme.PRIMARY,
+        square: true,
+    },
+};
+
+export const SquareSizeS: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.PRIMARY,
+        square: true,
+        size: ButtonSize.S,
+    },
+};
+
+export const SquareSizeM: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.PRIMARY,
+        square: true,
+        size: ButtonSize.M,
+    },
+};
+
+export const SquareSizeXl: Story = {
+    args: {
+        children: '>',
         theme: ButtonTheme.PRIMARY,
         square: true,
         size: ButtonSize.XL,
     },
+};
+export const SquareSizeSDark: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.PRIMARY,
+        square: true,
+        size: ButtonSize.S,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const SquareSizeMDark: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.PRIMARY,
+        square: true,
+        size: ButtonSize.M,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const SquareSizeXlDark: Story = {
+    args: {
+        children: '>',
+        theme: ButtonTheme.PRIMARY,
+        square: true,
+        size: ButtonSize.XL,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const SquareDark: Story = {
+    args: {
+        children: '<',
+        theme: ButtonTheme.PRIMARY,
+        square: true,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const PrimaryDark: Story = {

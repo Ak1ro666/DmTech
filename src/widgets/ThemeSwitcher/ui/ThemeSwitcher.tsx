@@ -1,11 +1,11 @@
 import { Theme, useTheme } from '@/app/providers/ThemeProvider';
-import { Button } from '@/shared/ui/Button';
+import { Button, ButtonSize } from '@/shared/ui/Button';
 
 export const ThemeSwitcher = () => {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <Button onClick={toggleTheme}>
+        <Button size={ButtonSize.S} onClick={toggleTheme}>
             {theme === Theme.DARK ? 'dark' : 'light'}
         </Button>
     );
