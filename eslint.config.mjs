@@ -8,6 +8,7 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import { fixupConfigRules } from '@eslint/compat';
 import i18nPlugin from 'eslint-plugin-i18next';
+import ReactHooksPlugin from 'eslint-plugin-react-hooks';
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
@@ -39,6 +40,7 @@ export default [
             'react-refresh': eslintReactRefresh,
             i18next: i18nPlugin,
             prettier: prettierPlugin,
+            'react-hooks': ReactHooksPlugin,
         },
     },
     pluginJs.configs.recommended,
@@ -53,6 +55,8 @@ export default [
             'i18next/no-literal-string': 2,
             '@typescript-eslint/ban-ts-comment': 'off',
             'react/display-name': 'off',
+            'react-hooks/rules-of-hooks': 'error',
+            'react-hooks/exhaustive-deps': 'error',
         },
     },
 ];

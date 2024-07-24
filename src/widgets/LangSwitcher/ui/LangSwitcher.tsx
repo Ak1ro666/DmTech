@@ -22,7 +22,7 @@ export const LangSwitcher = ({ className, shortLang }: LangSwitcherProps) => {
             size={ButtonSize.S}
             onClick={toggleLang}
         >
-            {t(shortLang ? 'Яз' : 'Язык')}
+            {t(shortLang ? 'Короткий язык' : 'Язык')}
         </Button>
     );
 };
