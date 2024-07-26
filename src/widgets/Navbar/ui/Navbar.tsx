@@ -33,12 +33,21 @@ export const Navbar = ({ className }: NavbarProps) => {
                 <AppLink
                     theme={AppLinkTheme.INVERTED_PRIMARY}
                     to={RoutePath.home}
+                    navbar
                 >
                     {t('Главная')}
                 </AppLink>
                 <AppLink
                     theme={AppLinkTheme.INVERTED_PRIMARY}
+                    to={RoutePath.goods}
+                    navbar
+                >
+                    {t('Товары')}
+                </AppLink>
+                <AppLink
+                    theme={AppLinkTheme.INVERTED_PRIMARY}
                     to={RoutePath.orders}
+                    navbar
                 >
                     {t('Заказы')}
                 </AppLink>

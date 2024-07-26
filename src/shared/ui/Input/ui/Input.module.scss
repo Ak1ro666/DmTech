@@ -1,0 +1,39 @@
+.Input {
+    margin: 0;
+    padding: 0;
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.primary {
+    color: var(--primary-color);
+    border: 1px solid var(--bg-color);
+}
+
+.secondary {
+    color: var(--secondary-color);
+    border: 1px solid var(--bg-color);
+}
+
+.clear {
+    color: var(--primary-color);
+    border: none;
+}
+
+.inverted_primary {
+    color: var(--inverted-primary-color);
+    border: 1px solid var(--inverted-bg-color);
+}
+
+.inverted_secondary {
+    color: var(--inverted-secondary-color);
+    border: 1px solid var(--inverted-bg-color);
+}
+
+.inverted_clear {
+    color: var(--inverted-primary-color);
+    border: none;
+}

@@ -12,13 +12,16 @@ const container = document.getElementById('root');
 const root = createRoot(container!);
 
 import '@/shared/config/i18n/i18n.config';
+import { StoreProvider } from './app/providers/StoreProvider';
 
 root.render(
-    <ErrorBoundary>
-        <BrowserRouter>
-            <ThemeProvider>
-                <App />
-            </ThemeProvider>
-        </BrowserRouter>
-    </ErrorBoundary>,
+    <StoreProvider>
+        <ErrorBoundary>
+            <BrowserRouter>
+                <ThemeProvider>
+                    <App />
+                </ThemeProvider>
+            </BrowserRouter>
+        </ErrorBoundary>
+    </StoreProvider>,
 );

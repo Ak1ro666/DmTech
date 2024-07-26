@@ -10,4 +10,5 @@ export const enum AppLinkTheme {
 
 export interface AppLinkProps extends LinkProps {
     theme?: AppLinkTheme;
+    navbar?: boolean;
 }

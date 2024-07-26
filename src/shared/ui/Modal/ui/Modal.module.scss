@@ -21,8 +21,8 @@
 .content {
     padding: 20px;
     border-radius: 20px;
-    background-color: black;
-    color: white;
+    background-color: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
     max-width: 60%;
     transition: transform 0.3s ease;
     transform: scale(0.6);
