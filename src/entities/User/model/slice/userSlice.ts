@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-
-import { UserSchema } from '../model/types/userSchema';
+import { UserSchema } from '../types/userSchema';
 
 const initialState: UserSchema = {
     authData: undefined,

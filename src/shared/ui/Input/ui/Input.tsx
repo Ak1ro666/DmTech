@@ -1,9 +1,9 @@
 import cn from '@/shared/lib/classNames/classNames';
 import styles from './Input.module.scss';
 import { InputProps, InputTheme } from './Input.props';
-import { ChangeEvent } from 'react';
+import { ChangeEvent, memo } from 'react';
 
-export const Input = (props: InputProps) => {
+export const Input = memo((props: InputProps) => {
     const {
         type = 'text',
         value,
@@ -30,4 +30,4 @@ export const Input = (props: InputProps) => {
             />
         </div>
     );
-};
+});

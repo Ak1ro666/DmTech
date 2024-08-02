@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import { AppLinkProps, AppLinkTheme } from './AppLink.props';
 import cn from '@/shared/lib/classNames/classNames';
 
+import { memo } from 'react';
+
 import styles from './AppLink.module.scss';
 import { NavLink } from 'react-router-dom';
 
-export const AppLink = (props: AppLinkProps) => {
+export const AppLink = memo((props: AppLinkProps) => {
     const {
         to,
         theme = AppLinkTheme.PRIMARY,
@@ -32,4 +34,4 @@ export const AppLink = (props: AppLinkProps) => {
             {children}
         </Link>
     );
-};
+});

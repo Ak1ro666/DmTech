@@ -1,5 +1,6 @@
-export const ROUTE_API = {
+export const API_URL = {
     root: (url: string = '') => `${url ? url : ''}`,
 
-    auth: (url: string = '') => ROUTE_API.root(`/auth${url ? '/' + url : ''}`),
+    products: (url: string = '') => API_URL.root(`/products${url}`),
+    categories: (url: string = '') => API_URL.root(`/categories${url}`),
 };

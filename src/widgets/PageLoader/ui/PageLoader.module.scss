@@ -1,5 +1,5 @@
 .page {
-    height: calc(100vh - var(--navbar-height));
+    height: calc(100vh - var(--navbar-height) - 40px);
     display: flex;
     flex: 1 1 auto;
     justify-content: center;

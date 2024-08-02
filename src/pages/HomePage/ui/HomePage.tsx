@@ -1,7 +1,13 @@
+import { Page } from '@/shared/ui/Page';
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-export const HomePage = () => {
+export const HomePage = memo(() => {
     const { t } = useTranslation('main');
 
-    return <div>{t('Главная страница')}</div>;
-};
+    return (
+        <Page>
+            <div>{t('Главная страница')}</div>
+        </Page>
+    );
+});

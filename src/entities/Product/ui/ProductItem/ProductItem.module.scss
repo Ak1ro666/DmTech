@@ -1,0 +1,22 @@
+.cart {
+    max-width: 100%;
+    border-radius: 16px;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.description {
+    padding: 16px;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+
+.price {
+    font: var(--font-m);
+    font-weight: bold;
+}

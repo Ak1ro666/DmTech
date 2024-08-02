@@ -14,11 +14,6 @@
     display: flex;
 }
 
-.page-wrapper {
-    flex: 1 1 auto;
-    padding: 20px;
-}
-
 .active {
     color: var(--secondary-color);
     border-bottom: 1px solid var(--secondary-color);

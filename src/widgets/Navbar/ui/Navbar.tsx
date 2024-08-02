@@ -8,7 +8,7 @@ import DarkCartIcon from '@/shared/assets/icons/cart-dark.svg';
 import LightCartIcon from '@/shared/assets/icons/cart-light.svg';
 import logo from '@/shared/assets/icons/logo.png';
 
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { Theme, useTheme } from '@/app/providers/ThemeProvider';
 import { useTranslation } from 'react-i18next';
 
@@ -16,7 +16,7 @@ interface NavbarProps {
     className?: string;
 }
 
-export const Navbar = ({ className }: NavbarProps) => {
+export const Navbar = memo(({ className }: NavbarProps) => {
     const [state] = useState(12);
     const { t } = useTranslation();
     const { theme } = useTheme();
@@ -64,4 +64,4 @@ export const Navbar = ({ className }: NavbarProps) => {
             </AppLink>
         </div>
     );
-};
+});

@@ -3,8 +3,9 @@ import styles from './NotFoundPage.module.scss';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { useNavigate } from 'react-router-dom';
 import { RoutePath } from '@/shared/config/router/router.config';
+import { memo } from 'react';
 
-export const NotFoundPage = () => {
+export const NotFoundPage = memo(() => {
     const { t } = useTranslation();
     const navigate = useNavigate();
 
@@ -20,4 +21,4 @@ export const NotFoundPage = () => {
             </Button>
         </div>
     );
-};
+});

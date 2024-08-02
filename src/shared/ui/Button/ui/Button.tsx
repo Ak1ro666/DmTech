@@ -3,8 +3,9 @@ import cn from '@/shared/lib/classNames/classNames';
 import { ButtonProps, ButtonSize, ButtonTheme } from './Button.props';
 
 import styles from './Button.module.scss';
+import { memo } from 'react';
 
-export const Button = (props: ButtonProps) => {
+export const Button = memo((props: ButtonProps) => {
     const {
         type = 'button',
         className,
@@ -32,4 +33,4 @@ export const Button = (props: ButtonProps) => {
             {children}
         </button>
     );
-};
+});

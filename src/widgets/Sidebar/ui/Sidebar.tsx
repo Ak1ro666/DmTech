@@ -2,14 +2,14 @@ import cn from '@/shared/lib/classNames/classNames';
 
 import styles from './Sidebar.module.scss';
 import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
 import { LangSwitcher } from '@/widgets/LangSwitcher';
 
 interface SidebarProps {
     className?: string;
 }
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState<boolean>(false);
 
     const toggleCollapsed = () => {
@@ -43,4 +43,4 @@ export const Sidebar = ({ className }: SidebarProps) => {
             </div>
         </div>
     );
-};
+});
